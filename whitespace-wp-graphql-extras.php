@@ -3,7 +3,7 @@
  * Plugin Name: Whitespace WP GraphQL Extras
  * Plugin URI: -
  * Description: Adds additional types and fields to the GraphQL API
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: Whitespace
  * Author URI: https://www.whitespace.se/
  */
@@ -25,7 +25,7 @@ add_action(
         $value = apply_filters(
           "wp-graphql-extras/ContentNode/archiveDates/value",
           $value,
-          $post
+          $post,
         );
         return $value;
       },
@@ -38,14 +38,14 @@ add_action(
         $value = apply_filters(
           "wp-graphql-extras/ContentNode/archiveDatesGmt/value",
           $value,
-          $post
+          $post,
         );
         return $value;
       },
     ]);
   },
   10,
-  1
+  1,
 );
 
 /**
@@ -59,13 +59,13 @@ add_action("graphql_register_types", function ($type_registry) {
         "type" => "MediaItemSizeEnum",
         "description" => __(
           "Size of the MediaItem to calculate sizes with",
-          "wp-graphql"
+          "wp-graphql",
         ),
       ],
     ],
     "description" => __(
       "The width attribute value for an image.",
-      "wp-graphql"
+      "wp-graphql",
     ),
     "resolve" => function ($source, $args) {
       $size = "medium";
@@ -83,13 +83,13 @@ add_action("graphql_register_types", function ($type_registry) {
         "type" => "MediaItemSizeEnum",
         "description" => __(
           "Size of the MediaItem to calculate sizes with",
-          "wp-graphql"
+          "wp-graphql",
         ),
       ],
     ],
     "description" => __(
       "The height attribute value for an image.",
-      "wp-graphql"
+      "wp-graphql",
     ),
     "resolve" => function ($source, $args) {
       $size = "medium";
@@ -113,10 +113,7 @@ add_action("graphql_register_types", function ($type_registry) {
  */
 add_filter(
   "graphql_allowed_fields_on_restricted_type",
-  function (
-    $allowed_restricted_fields,
-    $model_name
-  ) {
+  function ($allowed_restricted_fields, $model_name) {
     switch ($model_name) {
       case "PostTypeObject":
         $allowed_restricted_fields[] = "labels";
@@ -126,7 +123,7 @@ add_filter(
     return $allowed_restricted_fields;
   },
   10,
-  6
+  6,
 );
 
 /**
@@ -152,7 +149,7 @@ add_action(
     ]);
   },
   10,
-  1
+  1,
 );
 
 /**
