@@ -214,3 +214,13 @@ add_filter("graphql_response_headers_to_send", function ($headers) {
   $headers["Access-Control-Allow-Origin"] = get_http_origin();
   return $headers;
 });
+
+define("WHITESPACE_WP_GRAPHQL_EXTRAS_PATH", dirname(__FILE__));
+define(
+  "WHITESPACE_WP_GRAPHQL_EXTRAS_AUTOLOAD_PATH",
+  WHITESPACE_WP_GRAPHQL_EXTRAS_PATH . "/autoload",
+);
+
+array_map(static function () {
+  include_once func_get_args()[0];
+}, glob(WHITESPACE_WP_GRAPHQL_EXTRAS_AUTOLOAD_PATH . "/*.php"));
