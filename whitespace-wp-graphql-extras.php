@@ -142,7 +142,7 @@ add_action(
         preg_match_all("/wp-(?:image|caption)-(\d+)/", $content, $matches);
         $posts = array_map(function ($id) {
           $post = get_post($id);
-          return new Post($post);
+          return !empty($post) ?  new Post($post): null;
         }, array_unique($matches[1]));
         return $posts;
       },
