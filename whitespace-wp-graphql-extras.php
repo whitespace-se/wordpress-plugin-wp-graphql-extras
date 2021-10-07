@@ -144,7 +144,7 @@ add_action(
           $post = get_post($id);
           return !empty($post) ? new Post($post) : null;
         }, array_unique($matches[1]));
-        return $posts;
+        return array_filter($posts, fn($i) => !empty($i));
       },
     ]);
   },
