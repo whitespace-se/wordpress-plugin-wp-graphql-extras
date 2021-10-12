@@ -138,13 +138,11 @@ add_action(
         $post = get_post($post->ID);
         $content = $post->post_content;
         $content = apply_filters("the_content", $content);
-
         preg_match_all("/wp-(?:image|caption)-(\d+)/", $content, $matches);
-        $posts = array_map(function ($id) {
+        return array_filter(array_map(function ($id) {
           $post = get_post($id);
           return !empty($post) ? new Post($post) : null;
-        }, array_unique($matches[1]));
-        return array_filter($posts, fn($i) => !empty($i));
+        }, array_unique($matches[1])));
       },
     ]);
   },
