@@ -103,7 +103,11 @@ add_action("graphql_register_types", function ($type_registry) {
   $type_registry->register_field("MediaItem", "fileContent", [
     "type" => "String",
     "resolve" => function ($media_item) {
-      return file_get_contents($media_item->mediaItemUrl);
+      $path = get_attached_file($media_item->ID);
+      if (!$path) {
+        return null;
+      }
+      return file_get_contents($path);
     },
   ]);
 });
