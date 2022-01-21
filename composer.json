@@ -2,7 +2,7 @@
   "name": "whitespace-se/wordpress-plugin-wp-graphql-extras",
   "description": "Wordpress plugin that adds additional types and fields to the GraphQL API",
   "type": "wordpress-plugin",
-  "license": "MIT",
+  "license": "AGPL-3.0-or-later",
   "authors": [
     {
       "name": "Whitespace Dev",
