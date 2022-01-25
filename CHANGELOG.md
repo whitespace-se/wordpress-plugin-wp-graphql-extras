@@ -1,21 +1,33 @@
-## 0.1.3 (January 10, 2022)
+## [0.1.3](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/compare/v0.1.2...v0.1.3) (2022-01-10)
 
-### Fixes
 
-- `fileContent` field returns null (#2)
+### Bug Fixes
 
-## 0.1.2 (October 12, 2021)
+* `fileContent` field returns null ([f4adbaa](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/commit/f4adbaa0c3d480edf10a39e10aa1421a4b038bed)), closes [#2](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/issues/2)
 
-### Fixes
 
-- When we cant find some contentMedia dont fail. Just carry on.
-- adds an array_filter to $post after array is created
-- refactor how media are filtered and then added to graphql
 
-## 0.1.1 (May 12, 2021)
+## [0.1.2](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/compare/v0.1.1...v0.1.2) (2021-10-12)
 
-- Add `credit` field to `MediaItem` type and corresponding ACF field
 
-## 0.1.0 (April 14, 2021)
+### Bug Fixes
 
-🎉 First version
+* adds an array_filter to $post after array is created ([3a3d238](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/commit/3a3d23872af1a0a8ae51ed21bdc40fa926f2616f))
+* refactor how media are filtered and then added to graphql ([5f7e34a](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/commit/5f7e34aca28f8c6a00ab0e182317796ae52982e3))
+* When we cant find some contentMedia dont fail. Just carry on.  ([57bef61](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/commit/57bef61358495ad306420c17b3bfba12a797f493))
+
+
+
+## [0.1.1](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/compare/v0.1.0...v0.1.1) (2021-05-12)
+
+
+### Features
+
+* add `credit` field to `MediaItem` type ([9e706ad](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/commit/9e706add33b8c0f6d83eeafc2724b6a028ca5be8))
+
+
+
+# 0.1.0 (2021-04-14)
+
+
+
