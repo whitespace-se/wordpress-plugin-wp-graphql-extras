@@ -1,3 +1,7 @@
+# [1.0.0](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/compare/v0.1.3...v1.0.0) (2022-01-25)
+
+
+
 ## [0.1.3](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/compare/v0.1.2...v0.1.3) (2022-01-10)
 
 

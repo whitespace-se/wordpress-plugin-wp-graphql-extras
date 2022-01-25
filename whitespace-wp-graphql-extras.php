@@ -3,7 +3,7 @@
  * Plugin Name: Whitespace WP GraphQL Extras
  * Plugin URI: -
  * Description: Adds additional types and fields to the GraphQL API
- * Version: 0.1.3
+ * Version: 1.0.0
  * Author: Whitespace
  * Author URI: https://www.whitespace.se/
  */
