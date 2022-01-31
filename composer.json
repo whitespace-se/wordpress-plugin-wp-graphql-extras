@@ -9,6 +9,11 @@
       "email": "code@whitespace.se"
     }
   ],
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
   "repositories": [
     {
       "type": "composer",
