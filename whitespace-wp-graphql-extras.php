@@ -114,6 +114,7 @@ add_action("graphql_register_types", function ($type_registry) {
 
 /**
  * Allows querying of `labels` and `hasArchive` on `ContentType`
+ * Allows querying of `label` on `Taxonomy`
  */
 add_filter(
   "graphql_allowed_fields_on_restricted_type",
@@ -122,6 +123,9 @@ add_filter(
       case "PostTypeObject":
         $allowed_restricted_fields[] = "labels";
         $allowed_restricted_fields[] = "hasArchive";
+        break;
+      case "TaxonomyObject":
+        $allowed_restricted_fields[] = "label";
         break;
     }
     return $allowed_restricted_fields;
