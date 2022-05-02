@@ -144,15 +144,28 @@ add_action(
       "type" => ["list_of" => "MediaItem"],
       "resolve" => function ($post) {
         $post = get_post($post->ID);
+        if (empty($post)) {
+          return null;
+        }
         $content = $post->post_content;
         $content = apply_filters("the_content", $content);
         preg_match_all("/wp-(?:image|caption)-(\d+)/", $content, $matches);
-        return array_filter(
+        if (empty($matches)) {
+          return null;
+        }
+        $items = array_filter(
           array_map(function ($id) {
             $post = get_post($id);
-            return !empty($post) ? new Post($post) : null;
+            if (empty($post)) {
+              return null;
+            }
+            if ($post->post_type != "attachment") {
+              return null;
+            }
+            return new Post($post);
           }, array_unique($matches[1])),
         );
+        return $items;
       },
     ]);
   },
