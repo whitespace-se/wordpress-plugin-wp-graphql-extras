@@ -1,3 +1,15 @@
+## [1.1.0](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/compare/v1.0.0...v1.1.0) (2022-05-02)
+
+
+### Features
+
+* Allow querying of `label` on `Taxonomy` ([4063a4d](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/commit/4063a4d6404a43eb58ca63a80c5df43a125de338))
+
+
+### Bug Fixes
+
+* Avoid errors when fetching contentMedia field ([e8bf25a](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/commit/e8bf25abd8dd473a4f5c7c43e7c8c7b0d0374d84))
+
 ## [1.0.0](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/compare/v0.1.3...v1.0.0) (2022-01-25)
 
 ### [0.1.3](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/compare/v0.1.2...v0.1.3) (2022-01-10)
