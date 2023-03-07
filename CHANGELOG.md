@@ -1,3 +1,10 @@
+### [1.1.1](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/compare/v1.1.0...v1.1.1) (2023-03-07)
+
+
+### Bug Fixes
+
+* Avoid error when image file is missing ([234ff0e](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/commit/234ff0eb12d8abf091aedd87997537f2d2dc47c8))
+
 ## [1.1.0](https://github.com/whitespace-se/wordpress-plugin-wp-graphql-extras/compare/v1.0.0...v1.1.0) (2022-05-02)
 
 
