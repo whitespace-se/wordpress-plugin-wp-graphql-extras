@@ -205,6 +205,9 @@ add_action("graphql_register_types", function ($type_registry) {
       }
       $uploads_dir = wp_get_upload_dir();
       $info = image_get_intermediate_size($post->ID, "base64_blur");
+      if (empty($info)) {
+        return null;
+      }
       $path = realpath($uploads_dir["basedir"] . "/" . $info["path"]);
       if (empty($path)) {
         return null;
